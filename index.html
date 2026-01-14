@@ -13,10 +13,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="overflow-hidden min-h-screen bg-gradient-to-br from-black via-blue-900 to-pink-600">
+<body class="overflow-y-auto min-h-screen bg-gradient-to-br from-black via-blue-900 to-pink-600">
 
   <!-- BALLOONS -->
-  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
     <div class="balloon bg-blue-400 left-[10%]"></div>
     <div class="balloon bg-pink-400 left-[30%]" style="animation-delay:2s"></div>
     <div class="balloon bg-black left-[50%]" style="animation-delay:4s"></div>
@@ -26,62 +26,107 @@
 
   <!-- LANDING -->
   <section id="landing" class="relative z-10 min-h-screen flex items-center justify-center text-center px-6">
-    <div class="max-w-2xl text-white fade-in">
+    <div class="max-w-5xl text-white fade-in">
       <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-        Happy Work Anniversary
+        Happy 2nd Work Anniversary, Ms. Althea Muriel L. Pineda!
       </h1>
       <p class="text-lg md:text-xl opacity-90 mb-10">
-        A celebration of dedication, passion, and excellence.
+        A celebration of dedication, passion, and excellence at work.
       </p>
 
       <button onclick="revealCelebrant()"
         class="bg-pink-500 hover:bg-pink-600 px-10 py-4 rounded-full font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-110">
-        Celebrate Her 🎊
+        Celebrate with Ms. Althea
       </button>
     </div>
   </section>
+  
 
-  <!-- CELEBRANT -->
-  <section id="celebrant" class="hidden relative z-10 min-h-screen flex items-center justify-center px-6">
-    <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl max-w-4xl w-full p-8 md:p-14 fade-in">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+  <!-- CELEBRANT SECTION -->
+  <section id="celebrant" class="hidden relative z-10 px-6 py-16">
+    <div class="max-w-4xl mx-auto space-y-16 fade-in">
 
+      <!-- MAIN CELEBRANT CARD -->
+      <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
         <!-- IMAGE -->
-        <div class="flex justify-center">
-         <img
+        <div class="flex justify-center mb-6">
+          <img
             src="Assets/Thea.webp"
-            class="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-[0_20px_60px_rgba(236,72,153,0.6)] ring-[10px] ring-pink-400 transition-transform duration-500 hover:scale-105"
+            class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover shadow-[0_15px_40px_rgba(236,72,153,0.6)] ring-[8px] ring-pink-400 transition-transform duration-500 hover:scale-105"
             alt="Celebrant">
         </div>
 
         <!-- TEXT -->
-        <div class="text-center md:text-left">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-2">
-            Althea Muriel L. Pineda
-          </h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-2">
+          Althea Muriel L. Pineda
+        </h2>
 
-          <p class="text-lg font-medium text-gray-700 mb-4">
-            Celebrating <span class="font-bold text-pink-600">2 Amazing Years</span>
-          </p>
+        <p class="text-lg font-medium text-gray-700 mb-4">
+          Celebrating <span class="font-bold text-pink-600">2 Amazing Years</span>
+        </p>
 
-          <p class="text-gray-600 leading-relaxed mb-6">
-            Your hard work, kindness, and dedication have made a lasting impact.
-            Thank you for being an inspiration and a vital part of the team.
-          </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Your hard work, kindness, and dedication have made a lasting impact.
+          Thank you for being an inspiration and a vital part of the team.
+        </p>
 
-          <div class="flex flex-wrap justify-center md:justify-start gap-3">
-            <span class="px-5 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold">💙 Blue</span>
-            <span class="px-5 py-2 bg-black text-white rounded-full font-semibold">🖤 Black</span>
-            <span class="px-5 py-2 bg-pink-100 text-pink-700 rounded-full font-semibold">💗 Pink</span>
-          </div>
+        <!-- FAVORITE COLORS -->
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-5 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold">💙 Blue</span>
+          <span class="px-5 py-2 bg-black text-white rounded-full font-semibold">🖤 Black</span>
+          <span class="px-5 py-2 bg-pink-100 text-pink-700 rounded-full font-semibold">💗 Pink</span>
         </div>
-
       </div>
+
+      <!-- APPRECIATION CARD -->
+      <div class="bg-gradient-to-br from-blue-50 via-pink-50 to-white border border-pink-200 rounded-3xl shadow-xl p-8 md:p-12 text-justify fade-in">
+        <h3 class="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-6">
+           Happy 2nd Work Anniversary, Ms. Thea!
+        </h3>
+
+        <div class="text-gray-700 leading-relaxed space-y-4">
+          <p>
+            On this day, we acknowledge all your contributions, dedication, and commitment
+            as our <span class="font-semibold">Section Head</span>.
+          </p>
+
+          <p>
+            Congratulations on your second work anniversary as a permanent employee!
+            Your leadership as the <span class="font-semibold">PLDS Section Head</span> has
+            been instrumental to our Division’s success, and we truly appreciate all your
+            dedication to mentoring us.
+          </p>
+
+          <p>
+            We recognize all your hardship in carrying out assigned training, your innovative
+            problem-solving ways, your invaluable contributions to the team, and your exceptional
+            leadership — we are incredibly grateful!
+          </p>
+
+          <p>
+            Thank you so much, Ms. Thea, for being an essential part of our Division!
+            Thank you for all the guidance and love!
+          </p>
+
+          <p class="font-semibold text-center text-pink-600 pt-4">
+            🌟 We look forward to many more milestones with you! 🌟
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+<!-- FLOATING IMAGE SECTION (hidden initially) -->
+<section id="floating-images" class="hidden relative z-10 h-[120vh] overflow-hidden">
+  <!-- Middle overlay text -->
+  <h2 class="absolute inset-0 flex justify-center items-center text-4xl md:text-6xl font-bold text-white drop-shadow-xl text-center pointer-events-none max-w-4xl mx-auto px-4">
+  Happy 2nd Work Anniversary, Ms Thea
+  </h2>
+</section>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
