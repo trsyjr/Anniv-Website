@@ -7,6 +7,9 @@ function revealCelebrant() {
   celebrant.classList.remove('hidden');
   floating.classList.remove('hidden');
 
+  const music = document.getElementById('bg-music');
+  music.play();
+
   launchConfetti();
   showFloatingImagesTurn();
   spawnBalloons(15);
@@ -82,27 +85,47 @@ function showFloatingImagesTurn() {
   spawnNextImage();
 }
 
-function spawnBalloons(quantity = 10) {
+function spawnBalloons(quantity = 5) {
   const container = document.getElementById("floating-images");
   const containerWidth = container.offsetWidth;
   const containerHeight = container.offsetHeight;
 
+  const images = [
+    "Assets/Balloon.png",
+    "Assets/ZC.png",
+    "Assets/Plant.png"
+  ];
+
   for (let i = 0; i < quantity; i++) {
     const balloon = document.createElement("img");
-    balloon.src = "Assets/Balloon.png";
-    balloon.alt = "Balloon";
+
+    // Pick a random image (balloon, coffee, or plant)
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    balloon.src = randomImage;
+    balloon.alt = "Decoration";
     balloon.className = "floating-balloon opacity-0 absolute";
+
+    // Random size 60–120px
     const size = Math.random() * (120 - 60) + 60;
     balloon.style.width = size + "px";
+
+    // Random position
     balloon.style.left = Math.random() * (containerWidth - size) + "px";
     balloon.style.top = Math.random() * (containerHeight - size) + "px";
+
+    // Random float duration 5–8s
     const duration = Math.random() * 3 + 5;
     balloon.style.animation = `floatUpBalloon ${duration}s linear forwards`;
+
     container.appendChild(balloon);
+
+    // Fade-in
     setTimeout(() => {
       balloon.classList.remove("opacity-0");
       balloon.classList.add("transition-opacity", "duration-500", "opacity-100");
     }, 50);
+
+    // Remove after animation and respawn another
     balloon.addEventListener("animationend", () => {
       balloon.remove();
       setTimeout(() => spawnBalloons(1), Math.random() * 2000 + 500);

@@ -68,5 +68,8 @@ body {
     100% { transform: translateY(-130vh); opacity: 0; }
     }
 
+    #audio {
+    display: none;
+    }
 
 
